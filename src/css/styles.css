@@ -5,16 +5,22 @@
   line-height: 50px;
 }
 
+
 /* Loader CSS start here */
 
-@-webkit-keyframes rotate {
-  from {transform: rotate(0deg)}
-  to {transform: rotate(360deg)}
+@-webkit-keyframes loadAnnim {
+  from {-webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(360deg);}
 }
 
-@keyframes rotate {
-  from {transform: rotate(0deg)}
-  to {transform: rotate(360deg)}
+@-ms-keyframes loadAnnim {
+  from {-ms-transform: rotate(0deg);}
+  to {-ms-transform: rotate(360deg);}
+}
+
+@keyframes loadAnnim {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
 }
 
 .loader {
@@ -24,8 +30,9 @@
 
     background-image: url("../img/loader.svg");
 
-    -webkit-animation: rotate 1s steps(12) infinite;
-            animation: rotate 1s steps(12) infinite;
+    -webkit-animation: loadAnnim 1s steps(12) infinite;
+        -ms-animation: loadAnnim 1s steps(12) infinite;
+            animation: loadAnnim 1s steps(12) infinite;
 }
 
 
